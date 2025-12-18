@@ -1,12 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaskaran | CS & Math Portfolio</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8; /* Light Blue */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        h2 { font-size: 1.2rem; color: var(--text-muted); font-weight: 400; }
+        .highlight { color: var(--accent); font-weight: bold; }
+
+        /* Card Layout for Projects/Skills */
+        .section { margin-bottom: 50px; }
+        .section-title { 
+            border-bottom: 2px solid var(--card-bg); 
+            padding-bottom: 10px; 
+            margin-bottom: 20px; 
+            color: var(--accent);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+        
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { margin-top: 0; }
+
+        /* Skills Tags */
+        .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .tag {
+            background-color: #334155;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Button */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #0f172a;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <h1>Welcome to my CS Journey</h1>
-    <p>Student at U of Winnipeg | Math Minor | SQL Enthusiast</p>
-    <h2>Currently in progress</h2>
-    <h3>more on the way</h3>
+
+    <div class="container">
+        <header>
+            <h1>Hello, I'm <span class="highlight">Jaskaran</span>.</h1>
+            <h2>Applied Computer Science Major & Math Minor</h2>
+            <p>Based in Winnipeg, MB. Building data-driven solutions and exploring AI architecture.</p>
+            <a href="mailto:your-email@example.com" class="btn">Get in Touch</a>
+        </header>
+
+        <div class="section">
+            <h3 class="section-title">About Me</h3>
+            <p>I am a student at the <strong>University of Winnipeg</strong> with a passion for the intersection of Mathematics and Computer Science. My focus is on Backend Development, Database Management (SQL), and how linear algebra powers modern AI systems.</p>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Technical Skills</h3>
+            <div class="card">
+                <div class="tags">
+                    <span class="tag">PostgreSQL / SQL</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Linear Algebra</span>
+                    <span class="tag">Differential Equations</span>
+                    <span class="tag">Git / GitHub</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Projects & Experience</h3>
+            
+            <div class="card">
+                <h3>Math Concept Mind-Map (In Progress)</h3>
+                <p>Developing an interactive web platform to visualize connections between Pre-Calculus and Calculus concepts. This project aims to help students understand the "why" behind the math.</p>
+            </div>
+
+            <div class="card">
+                <h3>Inventory & Logistics Management</h3>
+                <p><strong>Shift Manager @ McDonald's:</strong> Oversaw inventory tracking and supply chain logistics for a high-volume location. Developed soft skills in team leadership and operational efficiency.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Jaskaran Singh. Built with HTML/CSS & Deployed on Cloudflare.</p>
+        </footer>
+    </div>
+
 </body>
 </html>
